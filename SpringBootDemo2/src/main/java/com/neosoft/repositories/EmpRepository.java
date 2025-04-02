@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmpRepository extends JpaRepository<Employee, Integer> {
 
+    public Employee findById(int id);
 
 }

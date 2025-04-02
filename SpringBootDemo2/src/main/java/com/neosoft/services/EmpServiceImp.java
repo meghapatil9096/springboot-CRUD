@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -32,9 +33,8 @@ public class EmpServiceImp implements EmpService{
     }
 // find by id
     @Override
-    public Employee findById(Integer id) {
-        return empRepository.findById(id)
-                .orElseThrow();
+    public Optional<Employee> findById(Integer id) {
+        return empRepository.findById(id);
     }
 //  Delete operation
     @Override

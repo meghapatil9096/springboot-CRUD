@@ -3,6 +3,7 @@ package com.neosoft.services;
 import com.neosoft.entities.Employee;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EmpService {
 
@@ -12,7 +13,7 @@ public interface EmpService {
 
     Employee update(Integer id, Employee employee);
 
-    Employee findById(Integer id);
+    Optional<Employee> findById(Integer id);
 
     void delete(Integer id);
 
