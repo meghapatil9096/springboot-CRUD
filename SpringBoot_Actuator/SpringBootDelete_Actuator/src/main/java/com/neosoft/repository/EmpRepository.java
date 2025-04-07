@@ -1,11 +1,11 @@
 package com.neosoft.repository;
 
-import com.neosoft.entities.Student;
+import com.neosoft.entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StudRepository extends JpaRepository<Student, Integer> {
+public interface EmpRepository extends JpaRepository<Employee, Integer> {
 
-    public Student findById(int id);
+    public void deleteById(int id);
 }
